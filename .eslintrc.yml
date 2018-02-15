@@ -1,0 +1,12 @@
+root: true
+parser: "babel-eslint"
+parserOptions:
+  sourceType: "module"
+  module: true
+env:
+  browser: true
+  es6: true
+  commonjs: true
+extends: "eslint:recommended"
+plugins:
+  - "html"
