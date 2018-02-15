@@ -1,11 +1,12 @@
 class CreateComments < ActiveRecord::Migration[5.2]
   def change
     create_table :comments do |t|
-      t.references :user, foreign_key: true
-      t.references :issue, foreign_key: true
-      t.text :content
-      t.integer :likes_count
-      t.boolean :secret
+      t.references :user,  foreign_key: true, null: false
+      t.references :issue, foreign_key: true, null: false
+
+      t.text    :content,     null: false
+      t.integer :likes_count, null: false, default: 0
+      t.boolean :secret,      null: false, default: false
 
       t.timestamps
     end
