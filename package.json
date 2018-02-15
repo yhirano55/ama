@@ -2,9 +2,22 @@
   "name": "ama",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.2.2"
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.3",
+    "@rails/webpacker": "^3.2.2",
+    "bootstrap": "^4.0.0",
+    "github-markdown-css": "^2.10.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "rails-ujs": "^5.1.5",
+    "stimulus": "^1.0.1",
+    "turbolinks": "^5.1.1"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.17.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.2",
     "webpack-dev-server": "^2.11.1"
   }
 }
