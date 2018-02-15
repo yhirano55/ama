@@ -1,9 +1,9 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.5.0'
+ruby "2.5.0"
 
-gem 'rails', github: "rails/rails", branch: "5-2-stable"
+gem "rails", github: "rails/rails", branch: "5-2-stable"
 
 gem "aws-sdk-s3", require: false
 gem "bootsnap", require: false
