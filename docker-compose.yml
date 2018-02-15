@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - store:/var/lib/postgres/data
+    ports:
+      - "5432:5432"
+  app:
+    build: .
+    command: bundle exec foreman start -f Procfile.dev
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_HOST: db
+    volumes:
+      - .:/usr/src/app
+      - bundle:/bundle
+      - yarn:/.cache
+    ports:
+      - "3000:3000"
+      - "3035:3035"
+    depends_on:
+      - db
+    tty: true
+    stdin_open: true
+
+volumes:
+  store:
+    driver: local
+  bundle:
+    driver: local
+  yarn:
+    driver: local
