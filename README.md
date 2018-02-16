@@ -1,24 +1,33 @@
-# README
+<img src="https://github.com/yhirano55/ama/blob/master/app/assets/images/logo.png?raw=true" width="255" height="80" alt="">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails Application for Ask Me Anything. This app is aim to take questions and feedbacks from audience.
 
-Things you may want to cover:
+## Dependencies
 
-* Ruby version
+- Ruby 2.5.0
+- Ruby on Rails 5.2.0.rc1
+- Yarn 1.3.2
+- Stimulus 1.0.1
+- Postgresql 9.6.3
+- cmake
 
-* System dependencies
+## Getting started
 
-* Configuration
+### on local
 
-* Database creation
+```
+$ bin/setup
+$ bin/rails s
+```
 
-* Database initialization
+### on docker
 
-* How to run the test suite
+```
+$ docker-compose build
+$ docker-compose run app rails db:create db:migrate db:seed
+$ docker-compose up
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## License
 
-* Deployment instructions
-
-* ...
+The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
