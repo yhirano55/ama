@@ -1,0 +1,14 @@
+= form_with model: comment do |form|
+  = render "error_messages", messages: comment.errors.full_messages if comment.errors.any?
+  = form.hidden_field :issue_id
+
+  .form-group
+    = form.text_area :content, class: "form-control", required: true, placeholder: t("placeholder.comment.content"), rows: 5
+
+  .form-group
+    .form-check
+      = form.check_box :secret, class: "form-check-input", id: "secret-check_box"
+      = form.label :secret, class: "form-check-label", for: "secret-check_box"
+
+  .actions
+    = form.submit class: "btn btn-success btn-block"

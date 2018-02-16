@@ -1,0 +1,37 @@
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.mb-3
+  .container
+    = link_to root_path, class: "navbar-brand" do
+      = image_tag "logo.svg", width: 158, height: 25, alt: t("application.name")
+
+    %button.navbar-toggler{ type: "button", "data-toggle": "collapse", "data-target": "#navbarSupportedContent", "aria-controls": "navbarSupportedContent", "aria-expanded": false, "aria-label": "Toggle navigation" }
+      %span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarSupportedContent
+      %ul.navbar-nav.mr-auto
+        - if policy(Comment).index?
+          %li.nav-item
+            = link_to t("comments.index.title"), comments_path, class: "nav-link"
+        - if policy(User).index?
+          %li.nav-item
+            = link_to t("users.index.title"), users_path, class: "nav-link"
+      %ul.navbar-nav.my-lg-0
+        %li.nav-item
+          = link_to github_url("railsdm/ama"), class: "nav-link", target: "_blank" do
+            %i.fas.fa-external-link-alt
+            = t(".source_code")
+        - if logged_in?
+          %li.nav-item.dropdown
+            = link_to "javascript:void(0)", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false do
+              - if current_user.image_url
+                = image_tag(current_user.avatar, width: 24, height: 24, alt: current_user.nickname, class: "rounded")
+              - else
+                = image_tag("guest.png", width: 24, height: 24, alt: current_user.nickname, class: "rounded")
+            .dropdown-menu.dropdown-menu-right{ "aria-labelledby": "navbarDropdown" }
+              - if policy(current_user).show?
+                = link_to t(".posted_comments"), current_user, class: "dropdown-item"
+              .dropdown-divider
+              = link_to t(".logout"), logout_path, method: :delete, class: "dropdown-item"
+        - else
+          %li.nav-item
+            = link_to login_path, class: "btn btn-dark", role: "button" do
+              %i.fab.fa-github
+              = t("shared.login")

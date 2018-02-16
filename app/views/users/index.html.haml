@@ -1,0 +1,11 @@
+- breadcrumb :resources, User
+
+- if @users.present?
+  = table_for @users do |t|
+    - t.column :id
+    - t.column :nickname do |user|
+      = link_to_if policy(user).show?, user.nickname, user, class: "text-dark"
+
+  = paginate @users
+- else
+  = render "blank_slate", resource: User

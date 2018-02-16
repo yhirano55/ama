@@ -1,0 +1,11 @@
+- breadcrumbs.tap do |links|
+  - if links.any?
+    %nav{ "aria-label": "breadcrumb" }
+      %ol.breadcrumb
+        - links.each do |link|
+          - if link.current?
+            %li.breadcrumb-item.active{ "aria-current": "page" }
+              %strong= link.text
+          - else
+            %li.breadcrumb-item
+              = link_to link.text, link.url, class: "text-muted"

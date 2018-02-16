@@ -1,0 +1,47 @@
+!!!
+%html{ lang: :en }
+  %head
+    %meta{ charset: "utf-8" }
+    %meta{ content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport" }
+    %meta{ content: "ie=edge", "http-equiv": "x-ua-compatible" }
+    %meta{ content: "telephone=no", name: "format-detection" }
+    %meta{ content: "#343a40", name: "theme-color" }
+    :ruby
+      default_meta_tags = {
+        site: t("application.name"),
+        reverse: true,
+        description: t("application.description"),
+        keywords: t("application.keywords"),
+        canonical: request.original_url,
+        og: {
+          site_name: t("application.name"),
+          title: :title,
+          image: image_url("summary.jpg"),
+          url: request.original_url,
+          description: :description,
+          type: "website",
+        },
+        twitter: {
+          card: "summary",
+          title: :title,
+          description: :description,
+          image: image_url("summary.jpg"),
+        },
+      }
+    = display_meta_tags(default_meta_tags)
+    = javascript_pack_tag "application", "data-turbolinks-track": "reload"
+    = stylesheet_pack_tag "application", "data-turbolinks-track": "reload"
+    = favicon_link_tag "apple-touch-icon.png", rel: "apple-touch-icon", type: "image/png", sizes: "180x180"
+    = favicon_link_tag "favicon-32x32.png",    rel: "icon",             type: "image/png", sizes: "32x32"
+    = favicon_link_tag "favicon-16x16.png",    rel: "icon",             type: "image/png", sizes: "16x16"
+    = favicon_link_tag "favicon.ico"
+    = csrf_meta_tags
+    = analytics_init
+  %body
+    = render "navbar"
+    .container
+      = render "breadcrumb"
+      = render "flash"
+      = yield
+      = render "breadcrumb"
+      = render "footer"

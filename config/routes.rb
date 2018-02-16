@@ -3,16 +3,12 @@ Rails.application.routes.draw do
   delete "/logout" => "sessions#destroy"
 
   resources :users, only: %i[index show]
-  resources :issues do
-    resource :like, only: :destroy, likeable_type: "Issue"
-  end
-  resources :comments do
-    resource :like, only: :destroy, likeable_type: "Comment"
-  end
-  resources :likes, only: :create
+  resources :issues
+  resources :comments
+  resource :like, only: %i[create destroy]
 
   direct(:login) { "/auth/github?origin=#{request.original_url}" }
   direct(:github) { |username_or_repo| "https://github.com/#{username_or_repo}" }
 
-  root "topics#index"
+  root "issues#index"
 end

@@ -1,0 +1,34 @@
+.media.mb-5{ class: "card-issue#{issue.id}" }
+  = link_to display_link(issue), class: "mr-3" do
+    = image_tag display_image(issue), width: 44, height: 44, alt: display_name(issue), class: "rounded"
+  .media-body
+    .card.card--main
+      .card-header
+        .author.float-left
+          = t(".author_html", nickname: link_to_if(policy(issue.user).show?, display_name(issue), display_link(issue), class: "text-dark font-weight-bold"), datetime: time_ago_in_words(issue.created_at))
+        .float-right
+          - if policy(issue).edit?
+            &nbsp;
+            = link_to [:edit, issue], class: "text-secondary d-inline-block mr-1", title: t("shared.edit"), id: "edit-issue#{issue.id}" do
+              %i.fas.fa-edit
+          - if policy(issue).destroy?
+            = link_to issue, method: :delete, class: "text-secondary d-inline-block", id: "destroy-issue#{issue.id}", title: t("shared.destroy"), data: { confirm: t("shared.confirm") } do
+              %i.far.fa-trash-alt
+      .card-body.markdown-body
+        = markdown issue.description
+        %p.text-right
+          - if logged_in?
+            - if policy(issue.likes).create?
+              %span{ data: { controller: :like, like: { state: "ready", id: issue.id, type: issue.model_name.name } } }
+                = link_to "javascript:void(0)", class: "text-muted", data: { action: "like#execute", target: "like.link" } do
+                  %i.far.fa-thumbs-up
+                  #{Like.model_name.human}(<span data-target="like.count">#{issue.likes_count}</span>)
+            - else
+              %span{ data: { controller: :like, like: { state: "done", id: issue.id, type: issue.model_name.name } } }
+                = link_to "javascript:void(0)", class: "font-weight-bold", data: { action: "like#execute", target: "like.link" } do
+                  %i.far.fa-thumbs-up
+                  #{Like.model_name.human}(<span data-target="like.count">#{issue.likes_count}</span>)
+          - else
+            %span.text-muted
+              %i.far.fa-thumbs-up
+              #{Like.model_name.human}(#{issue.likes_count})

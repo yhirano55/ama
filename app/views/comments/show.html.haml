@@ -1,0 +1,19 @@
+- breadcrumb :resource, @comment
+
+= attributes_table_for @comment do |t|
+  - t.row :id
+  - t.row :issue_id do |comment|
+    = link_to comment.issue.subject, comment.issue, class: "text-muted"
+  - t.row :content do |comment|
+    .markdown-body
+      = markdown comment.content
+  - t.row :likes_count
+  - t.row :user_id do |comment|
+    = link_to comment.user.nickname, comment.user, class: "text-muted"
+  - t.row :created_at
+  - t.row :updated_at
+
+- if policy(@comment).edit?
+  .mb-3
+    = link_to t("shared.edit"), [:edit, @comment], class: "btn btn-dark"
+    = link_to t("shared.destroy"), @comment, method: :delete, class: "btn btn-dark", data: { confirm: t("shared.confirm") }

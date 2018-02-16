@@ -1,0 +1,12 @@
+- breadcrumb :resources, Comment
+
+%h1.h3.mt-5.mb-4.font-weight-light
+  = t(".comments")
+
+= render "comments/nav"
+
+- if @comments.present?
+  = render partial: "comments/comment", collection: @comments, locals: { destination: true }
+  = paginate @comments
+- else
+  = render "blank_slate", resource: Comment

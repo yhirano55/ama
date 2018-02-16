@@ -1,33 +1,70 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  application:
+    name: "AMA"
+    description: "The Ask Me Anything Application."
+    keywords: "ruby on rails, developer, meetup"
+    navbar:
+      logout: "Sign out"
+      source_code: "GitHub"
+      posted_comments: "Your posts"
+    copyright_html: |
+      Created by <a href="https://github.com/yhirano55" class="text-dark">@yhirano55</a>
+  shared:
+    anonymous: "anonymous"
+    home: "HOME"
+    new: "Create"
+    show: "Detail"
+    edit: "Edit"
+    destroy: "Delete"
+    confirm: "Are you OK?"
+    blank_slate: "%{resource} is not yet created."
+    login: "Sign in with GitHub"
+    card:
+      header:
+        new: "Create %{resource}"
+        edit: "Edit %{resource}"
+    sort:
+      oldest: "Oldest"
+      newest: "Newest"
+      most_commented: "Most commented"
+      most_liked: "Most liked"
+  pundit:
+    default: "You cannot perform this action."
+  issues:
+    index:
+      title: "Issues"
+    show:
+      comments: "Questions and feedbacks (%{count})"
+      require_login: "Please sign in to comment."
+    issue:
+      author_html: "%{nickname} <span class='text-muted'>commented %{datetime}</span>"
+    new:
+      title: "Create Issue"
+    create:
+      title: "Create Issue"
+    edit:
+      title: "Edit Issue"
+    update:
+      title: "Edit Issue"
+  users:
+    index:
+      title: "Users"
+    show:
+      comments: "Questions and feedbacks (%{count})"
+  comments:
+    index:
+      title: "Comments"
+      comments: "Questions and feedbacks"
+    comment:
+      author_html: "%{nickname} <span class='text-muted'>commented %{datetime}</span>"
+    new:
+      title: "Create Comment"
+    create:
+      title: "Create Comment"
+    edit:
+      title: "Edit Comment"
+    update:
+      title: "Edit Comment"
+  helpers:
+    submit:
+      create: "Create"

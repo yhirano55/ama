@@ -1,0 +1,39 @@
+- destination ||= false
+.media.mb-3{ class: "card-comment#{comment.id}" }
+  = link_to display_link(comment), class: "mr-3" do
+    = image_tag display_image(comment), width: 44, height: 44, alt: display_name(comment), class: "rounded"
+  .media-body
+    .card
+      .card-header
+        .author.float-left
+          = t(".author_html", nickname: link_to_if(policy(comment.user).show?, display_name(comment), display_link(comment), class: "text-dark font-weight-bold"), datetime: time_ago_in_words(comment.created_at))
+        .float-right
+          - if policy(comment).edit?
+            = link_to [:edit, comment], class: "text-secondary d-inline-block mr-1", title: t("shared.edit"), id: "edit-comment#{comment.id}" do
+              %i.fas.fa-edit
+          - if policy(comment).destroy?
+            = link_to comment, method: :delete, class: "text-secondary d-inline-block", title: t("shared.destroy"), id: "destroy-comment#{comment.id}", data: { confirm: t("shared.confirm") } do
+              %i.far.fa-trash-alt
+      .card-body.markdown-body
+        = markdown comment.content
+        %p.text-right
+          - if logged_in?
+            - if policy(comment.likes).create?
+              %span{ data: { controller: :like, like: { state: "ready", id: comment.id } } }
+                = link_to "javascript:void(0)", class: "text-muted", data: { action: "like#execute", target: "like.link" } do
+                  %i.far.fa-thumbs-up
+                  #{Like.model_name.human}(<span data-target="like.count">#{comment.likes_count}</span>)
+            - else
+              %span{ data: { controller: :like, like: { state: "done", id: comment.id } } }
+                = link_to "javascript:void(0)", class: "font-weight-bold", data: { action: "like#execute", target: "like.link" } do
+                  %i.far.fa-thumbs-up
+                  #{Like.model_name.human}(<span data-target="like.count">#{comment.likes_count}</span>)
+          - else
+            %span.text-muted
+              %i.far.fa-thumbs-up
+              #{Like.model_name.human}(#{comment.likes_count})
+      - if destination
+        .card-footer
+          %i.fas.fa-arrow-right
+          = link_to comment.issue, class: "text-dark font-weight-bold" do
+            = comment.issue.subject

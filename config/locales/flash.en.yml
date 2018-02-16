@@ -1,0 +1,7 @@
+en:
+  flash:
+    logged_in: "Signed in successfully."
+    logged_out: "Signed out successfully."
+    created: "%{resource} was successfully created."
+    updated: "%{resource} was successfully updated."
+    destroyed: "%{resource} was successfully deleted."

@@ -1,0 +1,32 @@
+en:
+  attributes:
+    id: "ID"
+    created_at: "Created at"
+    updated_at: "Updated at"
+    comments_count: "Comment"
+    likes_count: "Like"
+
+  activerecord:
+    models:
+      user: "User"
+      issue: "Issue"
+      comment: "Comment"
+      like: "Like"
+    attributes:
+      user:
+        uid: "GitHub UID"
+        nickname: "GitHub"
+      issue:
+        user_id: "Author"
+        title: "Subject"
+        description: "Description"
+      comment:
+        user_id: "Author"
+        issue_id: "Issue"
+        content: "Content"
+
+  placeholder:
+    issue:
+      description: "Styling with Markdown is supported."
+    comment:
+      content: "Leave a comment: Styling with Markdown is supported."

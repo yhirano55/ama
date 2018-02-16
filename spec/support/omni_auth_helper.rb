@@ -2,7 +2,7 @@ module OmniAuthHelper
   def prepare_mock_auth_from(user)
     OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new(
       "provider" => "github",
-      "uid"      => user.github_id,
+      "uid"      => user.uid,
       "info" => {
         "image"    => user.image_url,
         "nickname" => user.nickname,

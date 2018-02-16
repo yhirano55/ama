@@ -1,0 +1,24 @@
+- breadcrumb :resource, @user
+
+= attributes_table_for @user do |t|
+  - t.row :nickname do |user|
+    = link_to github_url(user.nickname), target: "_blank", class: "text-muted" do
+      %i.fas.fa-external-link-alt
+      = user.nickname
+  - t.row :comments_count
+  - t.row :likes_count
+  - t.row :created_at do |user|
+    = l(user.created_at, format: :long)
+  - t.row :updated_at do |user|
+    = l(user.updated_at, format: :long)
+
+%h3.mt-5.mb-4.font-weight-light
+  = t(".comments", nickname: @user.nickname, count: @user.comments_count)
+
+= render "comments/nav"
+
+- if @comments.present?
+  = render partial: "comments/comment", collection: @comments, locals: { destination: true }
+  = paginate @comments
+- else
+  = render "blank_slate", resource: Comment

@@ -1,0 +1,19 @@
+- breadcrumb :resources, Issue
+
+= render "issues/nav"
+
+- if @issues.present?
+  = table_for @issues do |t|
+    - t.column :id
+    - t.column :subject do |issue|
+      = link_to_if policy(issue).show?, issue.subject, issue, class: "text-dark"
+    - t.column :comments_count
+    - t.column :likes_count
+    - t.column :updated_at do |issue|
+      = l(issue.updated_at, format: :long)
+- else
+  = render "blank_slate", resource: Issue
+
+- if policy(Issue).new?
+  .mb-3
+    = link_to t("issues.new.title", resource: Issue.model_name.human), [:new, :issue], class: "btn btn-dark"

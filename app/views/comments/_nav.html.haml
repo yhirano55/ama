@@ -1,0 +1,41 @@
+%ul.nav.nav-tabs.mb-4
+  - case params[:sort]
+  - when "most_liked"
+    %li.nav-item
+      = link_to url_for(sort: :newest),  class: ["nav-link", "text-muted"] do
+        %i.fas.fa-sort-amount-down
+        = t("shared.sort.newest")
+    %li.nav-item
+      = link_to url_for(sort: :oldest),  class: ["nav-link", "text-muted"] do
+        %i.fas.fa-sort-amount-up
+        = t("shared.sort.oldest")
+    %li.nav-item
+      = link_to url_for(sort: :most_liked), class: ["nav-link", "active"] do
+        %i.far.fa-thumbs-up
+        = t("shared.sort.most_liked")
+  - when "oldest"
+    %li.nav-item
+      = link_to url_for(sort: :newest),  class: ["nav-link", "text-muted"] do
+        %i.fas.fa-sort-amount-down
+        = t("shared.sort.newest")
+    %li.nav-item
+      = link_to url_for(sort: :oldest),  class: ["nav-link", "active"] do
+        %i.fas.fa-sort-amount-up
+        = t("shared.sort.oldest")
+    %li.nav-item
+      = link_to url_for(sort: :most_liked), class: ["nav-link", "text-muted"] do
+        %i.far.fa-thumbs-up
+        = t("shared.sort.most_liked")
+  - else
+    %li.nav-item
+      = link_to url_for(sort: :newest),  class: ["nav-link", "active"] do
+        %i.fas.fa-sort-amount-down
+        = t("shared.sort.newest")
+    %li.nav-item
+      = link_to url_for(sort: :oldest),  class: ["nav-link", "text-muted"] do
+        %i.fas.fa-sort-amount-up
+        = t("shared.sort.oldest")
+    %li.nav-item
+      = link_to url_for(sort: :most_liked), class: ["nav-link", "text-muted"] do
+        %i.far.fa-thumbs-up
+        = t("shared.sort.most_liked")

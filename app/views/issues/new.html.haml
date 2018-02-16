@@ -1,0 +1,8 @@
+- breadcrumb :new_resource, @issue
+
+.card.mb-3
+  .card-header
+    %strong
+      = t("shared.card.header.new", resource: Issue.model_name.human)
+  .card-body
+    = render 'form', issue: @issue

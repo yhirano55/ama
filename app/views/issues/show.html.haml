@@ -1,0 +1,42 @@
+- breadcrumb :resource, @issue
+
+%h1.mt-5.font-weight-light= @issue.subject
+
+%hr
+
+= render @issue
+
+%h2.h3.mt-5.mb-4.font-weight-light
+  = t(".comments", count: @issue.comments_count)
+
+= render "comments/nav"
+= render @comments
+
+- if policy(Comment).new?
+  .media.mb-3
+    - if current_user.image_url
+      = image_tag current_user.avatar, width: 44, height: 44, alt: "", class: "mr-3 rounded"
+    - else
+      = image_tag "guest.png", width: 44, height: 44, alt: "", class: "mr-3 rounded"
+    .media-body
+      .card
+        .card-header
+          %strong
+            = t("shared.card.header.new", resource: Comment.model_name.human)
+        .card-body
+          = render 'comments/form', comment: @issue.comments.new
+- else
+  .media.mb-3
+    = image_tag "guest.png", width: 44, height: 44, alt: "", class: "mr-3 rounded"
+    .media-body
+      .card
+        .card-header
+          %strong
+            = t("shared.card.header.new", resource: Comment.model_name.human)
+        .card-body
+          %p= t(".require_login")
+          = link_to login_path, class: "btn btn-dark btn-block" do
+            %i.fab.fa-github
+            = t("shared.login")
+
+= paginate @comments

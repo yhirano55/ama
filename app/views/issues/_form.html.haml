@@ -1,0 +1,16 @@
+= form_with model: issue, id: "comment-form" do |form|
+  = render "error_messages", messages: issue.errors.full_messages if issue.errors.any?
+
+  .form-group
+    = form.text_field :subject, class: "form-control", required: true, placeholder: Issue.human_attribute_name(:subject)
+
+  .form-group
+    = form.text_area :description, class: "form-control", required: true, placeholder: t("placeholder.issue.description"), rows: 10
+
+  .form-group
+    .form-check
+      = form.check_box :secret, class: "form-check-input", id: "secret-check_box"
+      = form.label :secret, class: "form-check-label", for: "secret-check_box"
+
+  .actions
+    = form.submit class: "btn btn-success btn-block"
