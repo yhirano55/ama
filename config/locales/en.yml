@@ -7,8 +7,8 @@ en:
       source_code: "Source code (%{version})"
       posted_comments: "Your posts"
     copyright_html: |
-      Copyright &copy; 2018 Yoshiyuki Hirano,
-      released under the MIT Licenses
+      This software is available as open source under the terms of the <a href="https://opensource.org/licenses/MIT" class="text-muted">MIT License</a>.<br>
+      <small>Copyright &copy; 2018 Yoshiyuki Hirano</small>
   shared:
     anonymous: "anonymous"
     home: "HOME"
