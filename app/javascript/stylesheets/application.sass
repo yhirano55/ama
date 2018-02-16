@@ -1,0 +1,36 @@
+@import "custom"
+@import "bootstrap"
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fontawesome"
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-brands"
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-regular"
+@import "~@fortawesome/fontawesome-free-webfonts/scss/fa-solid"
+@import "~github-markdown-css/github-markdown"
+
+html
+  -webkit-font-smoothing: antialiased
+
+.container
+  max-width: 980px
+
+.navbar-brand
+  line-height: 0
+
+.attributes_table_for
+  th
+    text-align: right
+    white-space: nowrap
+    width: 80px
+
+.alert--error_messages
+  list-style-position: inside
+
+.card--main
+  border: 1px solid #d1d5da
+  .card-header
+    background-color: #f1f8ff
+    border-bottom: 1px solid #d1d5da
+
+.markdown-body
+  font-family: $font-family-sans-serif
+  font-size: 0.875rem
+  line-height: 1.8
