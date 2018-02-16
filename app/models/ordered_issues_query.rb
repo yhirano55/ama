@@ -15,6 +15,6 @@ class OrderedIssuesQuery
     attr_reader :relation, :params
 
     def sort_by
-      params[:sort].presence_in(SORT_OPTIONS) || :newest
+      params[:sort].presence_in(SORT_OPTIONS) || :oldest
     end
 end
