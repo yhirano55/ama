@@ -45,12 +45,12 @@ module Ama
       g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
     config.active_job.queue_adapter = :inline
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins "*"
-        resource "/packs/_/_/node_modules/@fontawesome/fontawesome-free-webfonts/webfonts/*", headers: :any, methods: :get
-      end
-    end
+    # config.middleware.insert_before 0, Rack::Cors do
+    #   allow do
+    #     origins "*"
+    #     resource "/packs/_/_/node_modules/@fontawesome/fontawesome-free-webfonts/webfonts/*", headers: :any, methods: :get
+    #   end
+    # end
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
