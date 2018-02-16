@@ -1,14 +1,14 @@
 en:
   application:
     name: "AMA"
-    description: "The Ask Me Anything Application."
-    keywords: "ruby on rails, developer, meetup"
+    description: "This AMA `Ask Me Anything` application is aim to take questions and feedbacks from audience."
     navbar:
       logout: "Sign out"
-      source_code: "GitHub"
+      source_code: "Source code (%{version})"
       posted_comments: "Your posts"
     copyright_html: |
-      Created by <a href="https://github.com/yhirano55" class="text-dark">@yhirano55</a>
+      Copyright &copy; 2018 Yoshiyuki Hirano,
+      released under the MIT Licenses
   shared:
     anonymous: "anonymous"
     home: "HOME"

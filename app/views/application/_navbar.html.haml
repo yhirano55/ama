@@ -15,9 +15,9 @@
             = link_to t("users.index.title"), users_path, class: "nav-link"
       %ul.navbar-nav.my-lg-0
         %li.nav-item
-          = link_to github_url("railsdm/ama"), class: "nav-link", target: "_blank" do
+          = link_to github_url("yhirano55/ama"), class: "nav-link", target: "_blank" do
             %i.fas.fa-external-link-alt
-            = t(".source_code")
+            = t(".source_code", version: Ama::Version)
         - if logged_in?
           %li.nav-item.dropdown
             = link_to "javascript:void(0)", class: "nav-link dropdown-toggle", id: "navbarDropdown", role: "button", "data-toggle": "dropdown", "aria-haspopup": true, "aria-expanded": false do
