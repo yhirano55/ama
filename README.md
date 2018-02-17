@@ -1,5 +1,7 @@
 <img src="https://github.com/yhirano55/ama/blob/master/app/assets/images/logo.png?raw=true" width="255" height="80" alt="">
 
+[![CircleCI](https://circleci.com/gh/yhirano55/ama.svg?style=svg)](https://circleci.com/gh/yhirano55/ama)
+
 Rails Application for Ask Me Anything. This app is aim to take questions and feedbacks from audience.
 
 ## Dependencies
