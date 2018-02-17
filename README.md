@@ -2,7 +2,9 @@
 
 [![CircleCI](https://circleci.com/gh/yhirano55/ama.svg?style=svg)](https://circleci.com/gh/yhirano55/ama)
 
-Rails Application for Ask Me Anything. This app is aim to take questions and feedbacks from audience.
+"Ask Me Anything" with Rails 5.2 Application.
+
+This app is aim to take questions and feedbacks from audience.
 
 ## Dependencies
 
