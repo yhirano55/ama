@@ -19,12 +19,12 @@
         %p.text-right
           - if logged_in?
             - if policy(comment.likes).create?
-              %span{ data: { controller: :like, like: { state: "ready", id: comment.id } } }
+              %span{ data: { controller: :like, like: { state: "ready", id: comment.id, type: comment.model_name.name } } }
                 = link_to "javascript:void(0)", class: "text-muted", data: { action: "like#execute", target: "like.link" } do
                   %i.far.fa-thumbs-up
                   #{Like.model_name.human}(<span data-target="like.count">#{comment.likes_count}</span>)
             - else
-              %span{ data: { controller: :like, like: { state: "done", id: comment.id } } }
+              %span{ data: { controller: :like, like: { state: "done", id: comment.id, type: comment.model_name.name } } }
                 = link_to "javascript:void(0)", class: "font-weight-bold", data: { action: "like#execute", target: "like.link" } do
                   %i.far.fa-thumbs-up
                   #{Like.model_name.human}(<span data-target="like.count">#{comment.likes_count}</span>)
