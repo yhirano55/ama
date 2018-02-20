@@ -13,7 +13,7 @@
     "turbolinks": "^5.1.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^8.2.2",
     "eslint": "^4.17.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.9.0",
