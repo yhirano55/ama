@@ -9,8 +9,10 @@ This app is aim to take questions and feedbacks from audience.
 ## Dependencies
 
 - Ruby 2.5.0
-- Ruby on Rails 5.2.0.rc1
+- Ruby on Rails 5.2.0.rc1 (with Active Storage)
 - Yarn 1.3.2
+- Webpacker
+- Bootstrap 4
 - Stimulus 1.0.1
 - Postgresql 9.6.3
 - cmake
@@ -21,6 +23,7 @@ This app is aim to take questions and feedbacks from audience.
 
 ```
 $ bin/setup
+$ vim .env # for set GitHub auth key/secret. See: https://github.com/settings/developers
 $ bin/rails s
 ```
 
