@@ -95,7 +95,7 @@ GEM
     aws-sigv4 (1.0.2)
     bootsnap (1.1.8)
       msgpack (~> 1.0)
-    brakeman (4.1.1)
+    brakeman (4.2.0)
     builder (3.2.3)
     byebug (10.0.0)
     capybara (2.18.0)
