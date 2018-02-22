@@ -1,6 +1,7 @@
 - breadcrumb :resource, @issue
 
-%h1.mt-5.font-weight-light= @issue.subject
+%h1.mt-5.font-weight-light
+  = @issue.subject
 
 %hr
 
@@ -10,7 +11,7 @@
   = t(".comments", count: @issue.comments_count)
 
 = render "comments/nav"
-= render @comments
+= render partial: "comments/comment", collection: @comments, locals: { destination: false }
 
 - if policy(Comment).new?
   .media.mb-3
