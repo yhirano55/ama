@@ -3134,6 +3134,10 @@ inquirer@^3.0.6:
     strip-ansi "^4.0.0"
     through "^2.3.6"
 
+instantclick@^3.1.0-2:
+  version "3.1.0-2"
+  resolved "https://registry.yarnpkg.com/instantclick/-/instantclick-3.1.0-2.tgz#b079e1c93cb9cc543998c63799f68efa3f01acdd"
+
 internal-ip@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-1.2.0.tgz#ae9fbf93b984878785d50a8de1b356956058cf5c"
