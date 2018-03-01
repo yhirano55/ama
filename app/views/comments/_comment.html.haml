@@ -12,7 +12,7 @@
             = link_to [:edit, comment], class: "text-secondary d-inline-block mr-1", title: t("shared.edit"), id: "edit-comment#{comment.id}" do
               %i.fas.fa-edit
           - if policy(comment).destroy?
-            = link_to comment, method: :delete, class: "text-secondary d-inline-block", title: t("shared.destroy"), id: "destroy-comment#{comment.id}", data: { confirm: t("shared.confirm") } do
+            = link_to comment, method: :delete, class: "text-secondary d-inline-block", title: t("shared.destroy"), id: "destroy-comment#{comment.id}", data: { confirm: t("shared.confirm"), "no-instant": true } do
               %i.far.fa-trash-alt
       .card-body.markdown-body
         = markdown comment.content

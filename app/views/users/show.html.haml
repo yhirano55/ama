@@ -2,7 +2,7 @@
 
 = attributes_table_for @user do |t|
   - t.row :nickname do |user|
-    = link_to github_url(user.nickname), target: "_blank", class: "text-muted" do
+    = link_to github_url(user.nickname), target: "_blank", class: "text-muted", data: { "no-instant": true } do
       %i.fas.fa-external-link-alt
       = user.nickname
   - t.row :comments_count

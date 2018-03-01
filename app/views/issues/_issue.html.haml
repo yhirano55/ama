@@ -12,7 +12,7 @@
             = link_to [:edit, issue], class: "text-secondary d-inline-block mr-1", title: t("shared.edit"), id: "edit-issue#{issue.id}" do
               %i.fas.fa-edit
           - if policy(issue).destroy?
-            = link_to issue, method: :delete, class: "text-secondary d-inline-block", id: "destroy-issue#{issue.id}", title: t("shared.destroy"), data: { confirm: t("shared.confirm") } do
+            = link_to issue, method: :delete, class: "text-secondary d-inline-block", id: "destroy-issue#{issue.id}", title: t("shared.destroy"), data: { confirm: t("shared.confirm"), "no-instant": true } do
               %i.far.fa-trash-alt
       .card-body.markdown-body
         = markdown issue.description
