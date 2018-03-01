@@ -15,7 +15,7 @@
             = link_to t("users.index.title"), users_path, class: "nav-link"
       %ul.navbar-nav.my-lg-0
         %li.nav-item
-          = link_to github_url("yhirano55/ama"), class: "nav-link", target: "_blank" do
+          = link_to github_url("yhirano55/ama"), class: "nav-link", target: "_blank", data: { "no-instant": true } do
             %i.fas.fa-external-link-alt
             = t(".source_code", version: Ama::Version)
         - if logged_in?
@@ -29,9 +29,9 @@
               - if policy(current_user).show?
                 = link_to t(".posted_comments"), current_user, class: "dropdown-item"
               .dropdown-divider
-              = link_to t(".logout"), logout_path, method: :delete, class: "dropdown-item"
+              = link_to t(".logout"), logout_path, method: :delete, class: "dropdown-item", data: { "no-instant": true }
         - else
           %li.nav-item
-            = link_to login_path, class: "btn btn-dark", role: "button" do
+            = link_to login_path, class: "btn btn-dark", role: "button", data: { "no-instant": true } do
               %i.fab.fa-github
               = t("shared.login")
