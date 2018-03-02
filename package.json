@@ -10,7 +10,8 @@
     "popper.js": "^1.12.9",
     "rails-ujs": "^5.1.5",
     "stimulus": "^1.0.1",
-    "turbolinks": "^5.1.1"
+    "turbolinks": "^5.1.1",
+    "webpack-merge": "^4.1.2"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
