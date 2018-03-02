@@ -1,6 +1,5 @@
 import "stylesheets/application"
 import "bootstrap"
 import "./rails-ujs"
-// import "./instantclick"
 import "./turbolinks"
 import "./stimulus"

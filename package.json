@@ -6,7 +6,6 @@
     "@rails/webpacker": "^3.2.2",
     "bootstrap": "^4.0.0",
     "github-markdown-css": "^2.10.0",
-    "instantclick": "^3.1.0-2",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9",
     "rails-ujs": "^5.1.5",
