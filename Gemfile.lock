@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 7f9bd034c485c2425ae0164ff5d6374834e3aa1d
+  revision: 718e4c62681b295ab7379a0df009c43887786c6a
   branch: 5-2-stable
   specs:
     actioncable (5.2.0.rc1)
@@ -80,8 +80,8 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     awesome_print (1.8.0)
-    aws-partitions (1.67.0)
-    aws-sdk-core (3.16.0)
+    aws-partitions (1.68.0)
+    aws-sdk-core (3.17.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
@@ -123,7 +123,7 @@ GEM
     dotenv-rails (2.2.1)
       dotenv (= 2.2.1)
       railties (>= 3.2, < 5.2)
-    erubi (1.7.0)
+    erubi (1.7.1)
     factory_bot (4.8.2)
       activesupport (>= 3.0.0)
     factory_bot_rails (4.8.2)
@@ -142,7 +142,7 @@ GEM
     google-analytics-rails (1.1.1)
     gretel (3.0.9)
       rails (>= 3.1.0)
-    hamlit (2.8.6)
+    hamlit (2.8.7)
       temple (>= 0.8.0)
       thor
       tilt
@@ -197,7 +197,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    msgpack (1.2.2)
+    msgpack (1.2.4)
     multi_json (1.13.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
@@ -224,7 +224,7 @@ GEM
       rubocop (~> 0.52.1)
       rubocop-rspec (>= 1.22.0)
     parallel (1.12.1)
-    parser (2.5.0.0)
+    parser (2.5.0.2)
       ast (~> 2.4.0)
     pg (1.0.0)
     powerpack (0.1.1)
@@ -242,7 +242,7 @@ GEM
       activesupport (>= 3.0.0)
     rack (2.0.4)
     rack-cors (1.0.2)
-    rack-proxy (0.6.3)
+    rack-proxy (0.6.4)
       rack
     rack-test (0.8.3)
       rack (>= 1.0, < 3)
@@ -264,7 +264,7 @@ GEM
       railties (>= 5.0, < 6)
     rainbow (3.0.0)
     rake (12.3.0)
-    rb-fsevent (0.10.2)
+    rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     redcarpet (3.4.0)
@@ -294,7 +294,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.22.2)
+    rubocop-rspec (1.23.0)
       rubocop (>= 0.52.1)
     ruby-graphviz (1.2.3)
     ruby-progressbar (1.9.0)
@@ -329,7 +329,7 @@ GEM
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.3.0)
-    webpacker (3.2.2)
+    webpacker (3.3.0)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
