@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.4",
-    "@rails/webpacker": "^3.2.2",
+    "@rails/webpacker": "^3.3.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0",
     "core-js": "^2.5.3",
