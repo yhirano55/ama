@@ -93,7 +93,7 @@ GEM
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.0)
     aws-sigv4 (1.0.2)
-    bootsnap (1.1.8)
+    bootsnap (1.2.0)
       msgpack (~> 1.0)
     brakeman (4.2.0)
     builder (3.2.3)
