@@ -26,7 +26,7 @@ gem "seed-fu"
 gem "sentry-raven"
 gem "somemoji", require: false
 gem "table_help"
-gem "webpacker", "~> 3.2"
+gem "webpacker", "~> 3.3"
 
 group :development, :test do
   gem "awesome_print"
