@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/rails/rails.git
-  revision: e4617ac333d3e522478b8c9ba7b4410923892f97
+  revision: 4b2fcaf9d3da2998cabb074eba4210352225eb53
   branch: 5-2-stable
   specs:
     actioncable (5.2.0.rc1)
@@ -199,7 +199,7 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     newrelic_rpm (4.8.0.341)
-    nio4r (2.2.0)
+    nio4r (2.3.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     oauth2 (1.4.0)
