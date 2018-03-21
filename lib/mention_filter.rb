@@ -8,6 +8,7 @@ module MentionFilter
     doc.search(".//text()").each do |node|
       next unless node.content.include?("@")
       next if node.parent.name.in?(IGNORED_PARENT_NAMES)
+
       node.replace node_with_github_link(node.content)
     end
 

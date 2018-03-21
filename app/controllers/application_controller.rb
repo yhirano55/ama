@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
     def current_user
       return unless session[:remember_token]
       return @current_user if defined?(@current_user)
+
       @current_user = User.with_attached_avatar.find_by(remember_token: session[:remember_token])
     rescue ActiveRecord::RecordNotFound
       reset_session

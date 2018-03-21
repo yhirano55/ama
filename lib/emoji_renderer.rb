@@ -8,6 +8,7 @@ module EmojiRenderer
 
     doc.search(".//text()").each do |node|
       next if node.parent.name.in?(IGNORED_PARENT_NAMES)
+
       node.replace node_with_emoji(node.content)
     end
 
