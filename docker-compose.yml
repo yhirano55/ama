@@ -1,34 +1,42 @@
-version: "3"
-
+version: '3'
 services:
+  app:
+    image: ama
+    build: .
+    command: rails s -p 3000 -b 0.0.0.0
+    environment:
+      DATABASE_URL: postgres://postgres:@db:5432
+      WEBPACKER_DEV_SERVER_HOST: webpacker
+      WEBPACKER_DEV_SERVER_PORT: 3035
+    volumes:
+      - .:/ama
+      - /ama/node_modules
+      - public-data:/ama/public
+    ports:
+      - '3000:3000'
+    depends_on:
+      - db
+      - webpacker
+    tty: true
+    stdin_open: true
+  webpacker:
+    image: ama
+    command: ./bin/webpack-dev-server
+    environment:
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
+      WEBPACKER_DEV_SERVER_PORT: 3035
+      WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
+    volumes:
+      - ./app:/ama/app
+      - public-data:/ama/public
+    ports:
+      - '3035:3035'
   db:
     image: postgres
     volumes:
-      - store:/var/lib/postgres/data
+      - pg-data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
-  app:
-    build: .
-    command: bundle exec foreman start -f Procfile.dev
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_HOST: db
-    volumes:
-      - .:/usr/src/app
-      - bundle:/bundle
-      - yarn:/.cache
-    ports:
-      - "3000:3000"
-      - "3035:3035"
-    depends_on:
-      - db
-    tty: true
-    stdin_open: true
-
+      - '5432:5432'
 volumes:
-  store:
-    driver: local
-  bundle:
-    driver: local
-  yarn:
-    driver: local
+  pg-data:
+  public-data:
