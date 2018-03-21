@@ -1,9 +1,9 @@
 source "https://rubygems.org"
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
 ruby "2.5.0"
 
-gem "rails", github: "rails/rails", branch: "5-2-stable"
+gem "rails", "5.2.0.rc2"
 
 gem "aws-sdk-s3", require: false
 gem "counter_culture"
@@ -29,23 +29,16 @@ gem "table_help"
 gem "webpacker", "~> 3.3"
 
 group :development, :test do
-  gem "awesome_print"
   gem "dotenv-rails"
   gem "factory_bot_rails"
   gem "faker"
-  gem "foreman"
-  gem "hirb-unicode-steakknife"
-  gem "pry-byebug"
-  gem "pry-rails"
   gem "rspec-rails"
 end
 
 group :development do
   gem "annotate"
-  gem "brakeman", require: false
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "onkcop", require: false
-  gem "rails-erd"
 end
 
 group :test do

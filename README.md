@@ -9,7 +9,7 @@ This app is aim to take questions and feedbacks from audience.
 ## Dependencies
 
 - Ruby 2.5.0
-- Ruby on Rails 5.2.0.rc1 (with Active Storage)
+- Ruby on Rails 5.2.0.rc2 (with Active Storage)
 - Yarn 1.3.2
 - Webpacker
 - Bootstrap 4
@@ -31,10 +31,11 @@ $ bin/rails s
 
 ```
 $ docker-compose build
-$ docker-compose run app rails db:create db:migrate db:seed
-$ docker-compose up
+$ docker-compose run --rm app bin/setup
+$ vim .env # for set GitHub auth key/secret. See: https://github.com/settings/developers
+$ docker-compose up -d
 ```
 
 ## License
 
-The app is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+[MIT License](https://opensource.org/licenses/MIT)

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resource :like, only: %i[create destroy]
 
   direct(:login) { "/auth/github?origin=#{request.original_url}" }
-  direct(:github) { |username_or_repo| "https://github.com/#{username_or_repo}" }
+  direct(:github) {|username_or_repo| "https://github.com/#{username_or_repo}" }
 
   root "issues#index"
 end
