@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.5.0"
 
-gem "rails", github: "rails/rails", branch: "5-2-stable"
+gem "rails", "5.2.0.rc2"
 
 gem "aws-sdk-s3", require: false
 gem "counter_culture"
