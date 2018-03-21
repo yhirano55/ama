@@ -1,24 +1,18 @@
-FROM ruby:2.5
-ENV LANG C.UTF-8
-
-RUN curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
-    apt-get install -y cmake nodejs postgresql-client --no-install-recommends && \
-    npm install -g yarn && \
-    rm -rf /var/lib/apt/lists/*
-
-WORKDIR /tmp
-
-COPY Gemfile .
-COPY Gemfile.lock .
-RUN bundle install
-
-WORKDIR /usr/src/app
-
-COPY package.json .
-COPY yarn.lock .
+FROM ruby:2.5-alpine
+ENV LANG="ja_JP.UTF-8" \
+    APP_PATH="/ama"
+RUN apk --update --no-cache add build-base \
+                                linux-headers \
+                                git \
+                                cmake \
+                                less \
+                                postgresql-dev \
+                                nodejs \
+                                yarn \
+                                tzdata
+WORKDIR $APP_PATH
+ADD Gemfile* ./
+RUN bundle install --jobs=4
+ADD package.json yarn.lock ./
 RUN yarn
-
-COPY . /usr/src/app
-
-EXPOSE 3000
-CMD ["./bin/rails", "server", "-b", "0.0.0.0"]
+COPY . $APP_PATH
