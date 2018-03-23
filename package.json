@@ -12,7 +12,7 @@
     "jquery": "^3.3.1",
     "popper.js": "^1.14.1",
     "rails-ujs": "^5.1.5",
-    "raven-js": "^3.23.3",
+    "raven-js": "^3.24.0",
     "stimulus": "^1.0.1",
     "turbolinks": "^5.1.1",
     "webpack-merge": "^4.1.2"
