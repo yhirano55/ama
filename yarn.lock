@@ -71,9 +71,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@fortawesome/fontawesome-free-webfonts@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-webfonts/-/fontawesome-free-webfonts-1.0.4.tgz#bac5d89755bf3bc2d2b4deee47d92febf641bb1f"
+"@fortawesome/fontawesome-free-webfonts@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-free-webfonts/-/fontawesome-free-webfonts-1.0.5.tgz#3b9e023b6230cdb144204f08e77178c7694e9045"
 
 "@rails/webpacker@^3.4.1":
   version "3.4.1"
