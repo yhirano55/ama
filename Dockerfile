@@ -1,4 +1,4 @@
-FROM ruby:2.5-alpine
+FROM ruby:2.5.1-alpine
 ENV LANG="ja_JP.UTF-8" \
     APP_PATH="/ama"
 RUN apk --update --no-cache add build-base \
