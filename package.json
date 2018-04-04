@@ -10,7 +10,7 @@
     "element-closest": "^2.0.2",
     "github-markdown-css": "^2.10.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.1",
+    "popper.js": "^1.14.3",
     "rails-ujs": "^5.1.6",
     "raven-js": "^3.24.0",
     "stimulus": "^1.0.1",
