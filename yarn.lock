@@ -5137,9 +5137,9 @@ querystringify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-1.0.0.tgz#6286242112c5b712fa654e526652bf6a13ff05cb"
 
-rails-ujs@^5.1.6:
-  version "5.1.6"
-  resolved "https://registry.yarnpkg.com/rails-ujs/-/rails-ujs-5.1.6.tgz#cbf97787dd35d8e2d4317b8b709a0980276ab157"
+rails-ujs@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/rails-ujs/-/rails-ujs-5.2.0.tgz#d93f7a969a226c0ae67044172955be8c1cdf49fc"
 
 randomatic@^1.1.3:
   version "1.1.7"
