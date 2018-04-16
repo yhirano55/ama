@@ -5,7 +5,7 @@
     "@fortawesome/fontawesome-free-webfonts": "^1.0.6",
     "@rails/webpacker": "^3.4.1",
     "babel-polyfill": "^6.26.0",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.1.0",
     "core-js": "^2.5.5",
     "element-closest": "^2.0.2",
     "github-markdown-css": "^2.10.0",
