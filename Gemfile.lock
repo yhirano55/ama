@@ -47,7 +47,7 @@ GEM
     after_commit_action (1.1.0)
       activerecord (>= 3.0.0)
       activesupport (>= 3.0.0)
-    annotate (2.7.2)
+    annotate (2.7.3)
       activerecord (>= 3.2, < 6.0)
       rake (>= 10.4, < 13.0)
     archive-zip (0.11.0)
