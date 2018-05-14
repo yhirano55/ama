@@ -2,7 +2,7 @@
   "name": "ama",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free-webfonts": "^1.0.8",
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@rails/webpacker": "^3.5.3",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.1",
