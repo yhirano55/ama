@@ -11,7 +11,7 @@
   = t(".comments", count: @issue.comments_count)
 
 = render "comments/nav"
-= render partial: "comments/comment", collection: @comments, locals: { destination: false }
+= render partial: "comments/comment", collection: @comments, locals: { destination: false, paginate_params: { page: @comments.current_page, sort: params[:sort] } }
 
 - if policy(Comment).new?
   .media.mb-3

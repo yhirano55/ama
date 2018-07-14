@@ -5,7 +5,7 @@
     .card.card--main
       .card-header
         .author.float-left
-          = t(".author_html", nickname: link_to_if(policy(issue.user).show?, display_name(issue), display_link(issue), class: "text-dark font-weight-bold"), datetime: time_ago_in_words(issue.created_at))
+          = t(".author_html", nickname: link_to_if(policy(issue.user).show?, display_name(issue), display_link(issue), class: "text-dark font-weight-bold"), datetime: link_to(time_ago_in_words(issue.created_at), issue_path(issue), class: "text-muted", title: l(issue.created_at)))
         .float-right
           - if policy(issue).edit?
             &nbsp;
