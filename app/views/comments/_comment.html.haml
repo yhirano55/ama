@@ -1,12 +1,12 @@
 - destination ||= false
-.media.mb-3{ class: "card-comment#{comment.id}" }
+.media.mb-3{ class: "card-comment#{comment.id}", id: "comment-#{comment.id}" }
   = link_to display_link(comment), class: "mr-3" do
     = image_tag display_image(comment), width: 44, height: 44, alt: display_name(comment), class: "rounded"
   .media-body
     .card
       .card-header
         .author.float-left
-          = t(".author_html", nickname: link_to_if(policy(comment.user).show?, display_name(comment), display_link(comment), class: "text-dark font-weight-bold"), datetime: time_ago_in_words(comment.created_at))
+          = t(".author_html", nickname: link_to_if(policy(comment.user).show?, display_name(comment), display_link(comment), class: "text-dark font-weight-bold"), datetime: link_to_unless(destination, time_ago_in_words(comment.created_at), issue_path(comment.issue, anchor: "comment-#{comment.id}", params: local_assigns.fetch(:paginate_params, {})), class: "text-muted", title: l(comment.created_at)))
         .float-right
           - if policy(comment).edit?
             = link_to [:edit, comment], class: "text-secondary d-inline-block mr-1", title: t("shared.edit"), id: "edit-comment#{comment.id}" do
