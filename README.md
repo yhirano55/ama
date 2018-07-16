@@ -5,7 +5,7 @@
 
 "Ask Me Anything" with Rails 5.2 Application.
 
-This app is aim to take questions and feedbacks from audience.
+This app's aim is to take questions and feedback from the audience.
 
 ## Dependencies
 
