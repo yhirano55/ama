@@ -1,7 +1,8 @@
 FROM node:9-alpine as node
 FROM ruby:2.5.1-alpine
 ENV LANG="ja_JP.UTF-8" \
-    APP_PATH="/ama"
+    APP_PATH="/ama" \
+    RAILS_ENV="production"
 COPY --from=node /usr/local/bin/node /usr/local/bin/
 COPY --from=node /opt/yarn-v1.5.1 /opt/yarn
 RUN apk --update --no-cache add build-base \
@@ -15,7 +16,8 @@ RUN apk --update --no-cache add build-base \
     && ln -s /opt/yarn/bin/yarn /usr/local/bin/yarnpkg
 WORKDIR $APP_PATH
 ADD Gemfile* ./
-RUN bundle install --jobs=4 --without production
+RUN bundle install --jobs=4 --without development test
 ADD package.json yarn.lock ./
 RUN yarn
 COPY . $APP_PATH
+RUN rails assets:precompile
