@@ -2,9 +2,9 @@
 #
 # Table name: comments
 #
-#  id          :integer          not null, primary key
-#  user_id     :integer          not null
-#  issue_id    :integer          not null
+#  id          :bigint(8)        not null, primary key
+#  user_id     :bigint(8)        not null
+#  issue_id    :bigint(8)        not null
 #  content     :text             not null
 #  likes_count :integer          default(0), not null
 #  secret      :boolean          default(FALSE), not null

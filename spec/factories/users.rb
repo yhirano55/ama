@@ -2,7 +2,7 @@
 #
 # Table name: users
 #
-#  id             :integer          not null, primary key
+#  id             :bigint(8)        not null, primary key
 #  uid            :integer          not null
 #  nickname       :string           not null
 #  image_url      :string

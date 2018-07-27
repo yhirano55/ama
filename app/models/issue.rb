@@ -2,8 +2,8 @@
 #
 # Table name: issues
 #
-#  id             :integer          not null, primary key
-#  user_id        :integer          not null
+#  id             :bigint(8)        not null, primary key
+#  user_id        :bigint(8)        not null
 #  subject        :string           not null
 #  description    :text             not null
 #  comments_count :integer          default(0), not null
