@@ -1,9 +1,9 @@
-FROM node:9-alpine as node
+FROM node:10-alpine as node
 FROM ruby:2.5.1-alpine
 ENV LANG="ja_JP.UTF-8" \
     APP_PATH="/ama"
 COPY --from=node /usr/local/bin/node /usr/local/bin/
-COPY --from=node /opt/yarn-v1.5.1 /opt/yarn
+COPY --from=node /opt/yarn-v1.7.0 /opt/yarn
 RUN apk --update --no-cache add build-base \
                                 linux-headers \
                                 git \
