@@ -271,7 +271,7 @@ GEM
     seed-fu (2.3.9)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
-    selenium-webdriver (3.13.1)
+    selenium-webdriver (3.14.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2)
     sentry-raven (2.7.4)
