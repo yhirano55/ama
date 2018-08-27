@@ -112,25 +112,25 @@
     webpack "^3.12.0"
     webpack-manifest-plugin "^1.3.2"
 
-"@stimulus/core@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@stimulus/core/-/core-1.0.1.tgz#76e2c9e007df8a89dd5f8f707c63a64e1c6afef0"
+"@stimulus/core@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/core/-/core-1.1.0.tgz#0fe7f5bf555aa2a31b4576f2b3389fd192a27138"
   dependencies:
-    "@stimulus/mutation-observers" "^1.0.0"
+    "@stimulus/mutation-observers" "^1.1.0"
 
-"@stimulus/multimap@^0.9.0":
-  version "0.9.0"
-  resolved "https://registry.yarnpkg.com/@stimulus/multimap/-/multimap-0.9.0.tgz#ed63699b3efb273411c118a50955569b2565a6e8"
+"@stimulus/multimap@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/multimap/-/multimap-1.1.0.tgz#f373ff72feab4218b2a9ae00866acc47d5032f5e"
 
-"@stimulus/mutation-observers@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@stimulus/mutation-observers/-/mutation-observers-1.0.0.tgz#5a54cf78ce697b72f47a7c4f4594c024a7c2656e"
+"@stimulus/mutation-observers@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/mutation-observers/-/mutation-observers-1.1.0.tgz#8744d8b37302baeffcdd9123021c55084fb82beb"
   dependencies:
-    "@stimulus/multimap" "^0.9.0"
+    "@stimulus/multimap" "^1.1.0"
 
-"@stimulus/webpack-helpers@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-1.0.0.tgz#f38b8281182436085d3472dc963dcbd81d731141"
+"@stimulus/webpack-helpers@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-1.1.0.tgz#17f00ea6eaa38b490ba84fec6f6c436c604a4a85"
 
 abbrev@1:
   version "1.1.1"
@@ -5787,12 +5787,12 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-stimulus@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-1.0.1.tgz#34418d9e05039920359c02590841147bce78b555"
+stimulus@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/stimulus/-/stimulus-1.1.0.tgz#d313e59bc0085eec5e072a401e0fb2c5fb0a0301"
   dependencies:
-    "@stimulus/core" "^1.0.1"
-    "@stimulus/webpack-helpers" "^1.0.0"
+    "@stimulus/core" "^1.1.0"
+    "@stimulus/webpack-helpers" "^1.1.0"
 
 stream-browserify@^2.0.1:
   version "2.0.1"
