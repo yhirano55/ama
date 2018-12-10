@@ -11,7 +11,7 @@
     "github-markdown-css": "^2.10.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.6",
-    "rails-ujs": "^5.2.1",
+    "rails-ujs": "^5.2.2",
     "raven-js": "^3.27.0",
     "stimulus": "^1.1.0",
     "turbolinks": "^5.2.0",
