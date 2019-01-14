@@ -278,7 +278,7 @@ GEM
     selenium-webdriver (3.141.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.2, >= 1.2.2)
-    sentry-raven (2.7.4)
+    sentry-raven (2.8.0)
       faraday (>= 0.7.6, < 1.0)
     slop (4.6.2)
     somemoji (0.7.1)
