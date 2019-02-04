@@ -7,7 +7,7 @@
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.2.1",
     "core-js": "^2.6.3",
-    "element-closest": "^2.0.2",
+    "element-closest": "^3.0.0",
     "github-markdown-css": "^2.10.0",
     "jquery": "^3.3.1",
     "popper.js": "^1.14.7",
