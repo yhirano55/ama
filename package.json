@@ -6,7 +6,7 @@
     "@rails/webpacker": "^3.5.5",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.3.0",
-    "core-js": "^2.6.3",
+    "core-js": "^2.6.4",
     "element-closest": "^2.0.2",
     "github-markdown-css": "^2.10.0",
     "jquery": "^3.3.1",
