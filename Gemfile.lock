@@ -111,11 +111,11 @@ GEM
     google-analytics-rails (1.1.1)
     gretel (3.0.9)
       rails (>= 3.1.0)
-    hamlit (2.8.7)
+    hamlit (2.9.2)
       temple (>= 0.8.0)
       thor
       tilt
-    hamlit-rails (0.2.0)
+    hamlit-rails (0.2.1)
       actionpack (>= 4.0.1)
       activesupport (>= 4.0.1)
       hamlit (>= 1.2.0)
@@ -297,7 +297,7 @@ GEM
     temple (0.8.0)
     thor (0.20.3)
     thread_safe (0.3.6)
-    tilt (2.0.8)
+    tilt (2.0.9)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unicode-display_width (1.4.1)
