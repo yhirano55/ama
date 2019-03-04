@@ -26,7 +26,7 @@ gem "seed-fu"
 gem "sentry-raven"
 gem "somemoji", require: false
 gem "table_help"
-gem "webpacker", "~> 3.5"
+gem "webpacker", "~> 4.0"
 
 group :development, :test do
   gem "dotenv-rails"
