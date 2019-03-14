@@ -1,5 +1,5 @@
 FROM node:10-alpine as node
-FROM ruby:2.6.2-alpine
+FROM ruby:2.6.1-alpine
 ENV LANG="ja_JP.UTF-8" APP_PATH="/ama"
 COPY --from=node /usr/local/bin/node /usr/local/bin/
 COPY --from=node /opt/yarn-v* /opt/yarn
