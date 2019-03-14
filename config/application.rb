@@ -36,12 +36,12 @@ module Ama
       g.assets false
       g.helper false
       g.template_engine :haml
-      g.test_framework :rspec, view_specs:       false,
+      g.test_framework :rspec, view_specs: false,
                                controller_specs: false,
-                               helper_specs:     false,
-                               routing_specs:    false,
-                               request_specs:    false,
-                               fixture:          true
+                               helper_specs: false,
+                               routing_specs: false,
+                               request_specs: false,
+                               fixture: true
       g.fixture_replacement :factory_bot, dir: "spec/factories"
     end
     config.active_job.queue_adapter = :inline

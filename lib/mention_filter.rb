@@ -1,6 +1,6 @@
 module MentionFilter
   IGNORED_PARENT_NAMES = %w[code pre a style blockquote].freeze
-  PATTERN = %r{(?:^|\W)@((?>[\w][\w-]{0,30}\w))(?!\/)(?=\.+[ \t\W]|\.+$|[^0-9a-zA-Z_.]|$)}
+  PATTERN = %r{(?:^|\W)@((?>[\w][\w-]{0,30}\w))(?!\/)(?=\.+[ \t\W]|\.+$|[^0-9a-zA-Z_.]|$)}.freeze
 
   def mention_link_filter(document)
     doc = Nokogiri::HTML::DocumentFragment.parse(document)
