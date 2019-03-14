@@ -12,6 +12,7 @@ jobs:
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
           DATABASE_USERNAME: root
+          DATABASE_HOST: 127.0.0.1
       - image: circleci/postgres:9.5-alpine
         environment:
           POSTGRES_USER: root
