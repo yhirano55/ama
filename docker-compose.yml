@@ -1,42 +1,24 @@
 version: '3'
 services:
+  db:
+    image: postgres:9.5-alpine
+    volumes:
+      - pg-data:/var/lib/postgresql/data
   app:
     image: ama
     build: .
-    command: rails s -p 3000 -b 0.0.0.0
-    environment:
-      DATABASE_URL: postgres://postgres:@db:5432
-      WEBPACKER_DEV_SERVER_HOST: webpacker
-      WEBPACKER_DEV_SERVER_PORT: 3035
+    ports:
+      - '3000:3000'
     volumes:
       - .:/ama
       - /ama/node_modules
-      - public-data:/ama/public
-    ports:
-      - '3000:3000'
+    command: ash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     depends_on:
       - db
-      - webpacker
     tty: true
     stdin_open: true
-  webpacker:
-    image: ama
-    command: ./bin/webpack-dev-server
     environment:
-      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0
-      WEBPACKER_DEV_SERVER_PORT: 3035
-      WEBPACKER_DEV_SERVER_PUBLIC: 0.0.0.0:3035
-    volumes:
-      - ./app:/ama/app
-      - public-data:/ama/public
-    ports:
-      - '3035:3035'
-  db:
-    image: postgres
-    volumes:
-      - pg-data:/var/lib/postgresql/data
-    ports:
-      - '5432:5432'
+      DATABASE_HOST: db
+      DATABASE_USERNAME: postgres
 volumes:
   pg-data:
-  public-data:
