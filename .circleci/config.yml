@@ -5,15 +5,14 @@ jobs:
     parallelism: 3
     working_directory: ~/app
     docker:
-      - image: circleci/ruby:2.5.1-node
+      - image: circleci/ruby:2.6.2-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
+          DATABASE_USERNAME: postgres
       - image: circleci/postgres:9.5-alpine
-        environment:
-          POSTGRES_USER: root
     steps:
       - checkout
 
@@ -28,7 +27,6 @@ jobs:
       - restore_cache:
           keys:
             - ama-bundle-v2-{{ checksum "Gemfile.lock" }}
-            - ama-bundle-v2-
 
       - run:
           name: Bundle Install
@@ -42,16 +40,15 @@ jobs:
       - restore_cache:
           keys:
             - ama-yarn-{{ checksum "yarn.lock" }}
-            - ama-yarn-
 
       - run:
           name: Yarn Install
-          command: yarn install --cache-folder ~/.cache/yarn
+          command: yarn install
 
       - save_cache:
           key: ama-yarn-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache/yarn
+            - node_modules
 
       - run: bin/rails db:create
       - run: bin/rails db:schema:load --trace
