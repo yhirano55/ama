@@ -28,7 +28,7 @@ FactoryBot.define do
     association :issue
     content { Faker::Lorem.paragraph }
 
-    trait(:public) { secret false }
-    trait(:secret) { secret true  }
+    trait(:public) { secret { false } }
+    trait(:secret) { secret { true }  }
   end
 end

@@ -24,8 +24,8 @@ FactoryBot.define do
     sequence :uid
     nickname { Faker::Internet.user_name }
 
-    trait(:guest)  { role :guest  }
-    trait(:admin)  { role :admin  }
-    trait(:banned) { role :banned }
+    trait(:guest)  { role { :guest }  }
+    trait(:admin)  { role { :admin }  }
+    trait(:banned) { role { :banned } }
   end
 end
