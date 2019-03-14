@@ -5,14 +5,17 @@ jobs:
     parallelism: 3
     working_directory: ~/app
     docker:
-      - image: circleci/ruby:2.6.2-node
+      - image: circleci/ruby:2.6.1-node
         environment:
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
-          DATABASE_USERNAME: postgres
+          DATABASE_USERNAME: root
+          DATABASE_HOST: 127.0.0.1
       - image: circleci/postgres:9.5-alpine
+        environment:
+          POSTGRES_USER: root
     steps:
       - checkout
 

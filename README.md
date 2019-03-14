@@ -9,7 +9,7 @@ This app's aim is to take questions and feedback from the audience.
 
 ## Dependencies
 
-- Ruby 2.6.2
+- Ruby 2.6.1
 - Ruby on Rails 5.2.2 (with Active Storage)
 - Yarn 1.13.0
 - Webpacker
