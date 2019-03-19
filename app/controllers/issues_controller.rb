@@ -10,7 +10,7 @@ class IssuesController < ApplicationController
   def show
     @page_title = @issue.subject
     relation = @issue.comments.eager_load(:likes, user: { avatar_attachment: :blob })
-    @comments = OrderedCommentsQuery.new(relation, params.slice(:sort)).all.page(params[:page])
+    @comments = OrderedCommentsQuery.new(relation, params.slice(:sort)).all.page(params[:page]).per(100)
   end
 
   def new
