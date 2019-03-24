@@ -29,6 +29,6 @@
                   %i.far.fa-thumbs-up
                   #{Like.model_name.human}(<span data-target="like.count">#{issue.likes_count}</span>)
           - else
-            %span.text-muted
+            = link_to login_path, class: "text-muted" do
               %i.far.fa-thumbs-up
               #{Like.model_name.human}(#{issue.likes_count})
