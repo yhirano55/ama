@@ -9,7 +9,7 @@
     "core-js": "^2.6.5",
     "element-closest": "^3.0.1",
     "github-markdown-css": "^3.0.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
     "popper.js": "^1.15.0",
     "rails-ujs": "^5.2.3",
     "raven-js": "^3.27.0",
