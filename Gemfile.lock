@@ -194,7 +194,8 @@ GEM
     powerpack (0.1.2)
     psych (3.1.0)
     public_suffix (4.0.5)
-    puma (3.12.4)
+    puma (4.3.3)
+      nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (2.2.2)
@@ -337,7 +338,7 @@ DEPENDENCIES
   omniauth-github
   onkcop
   pg (~> 1.2)
-  puma (~> 3.12)
+  puma (~> 4.3)
   pundit
   rack-cors
   rack-user_agent
