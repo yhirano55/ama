@@ -15,7 +15,7 @@
     "raven-js": "^3.27.2",
     "stimulus": "^1.1.1",
     "turbolinks": "^5.2.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^5.1.4"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
