@@ -8,7 +8,7 @@
     "bootstrap": "^4.5.3",
     "core-js": "^2.6.7",
     "element-closest": "^3.0.2",
-    "github-markdown-css": "^3.0.1",
+    "github-markdown-css": "^4.0.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
     "rails-ujs": "^5.2.4",
