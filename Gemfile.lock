@@ -158,7 +158,9 @@ GEM
     meta-tags (2.13.0)
       actionpack (>= 3.2.0, < 6.1)
     method_source (1.0.0)
-    mimemagic (0.3.5)
+    mimemagic (0.3.10)
+      nokogiri (~> 1)
+      rake
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.1)
@@ -194,7 +196,8 @@ GEM
     powerpack (0.1.2)
     psych (3.1.0)
     public_suffix (4.0.5)
-    puma (3.12.6)
+    puma (4.3.8)
+      nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     rack (2.2.3)
@@ -337,7 +340,7 @@ DEPENDENCIES
   omniauth-github
   onkcop
   pg (~> 1.2)
-  puma (~> 3.12)
+  puma (~> 4.3)
   pundit
   rack-cors
   rack-user_agent
